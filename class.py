@@ -21,19 +21,27 @@
 #         print(f"{self.owner} has ${self.__balance}")
 
 
-class Hero:
-    def __init__(self, name, money, inventory):
-        self.name = name
-        self.money = money
-        self.inventory = inventory
+# class Hero:
+#     def __init__(self, name, money, inventory):
+#         self.name = name
+#         self.money = money
+#         self.inventory = inventory
 
-    def buy(self, item):
-        self.inventory.append(item)
-        print (f"This is your inventory {self.inventory}")
-Nathan = Hero("Batman", 200, ['Batarang'])
-print (Nathan.__dict__)
-Nathan.buy({"title": "Batmobile", "maxspeed": "Mach 1"})
+#     def buy(self, item):
+#         self.inventory.append(item)
+#         print (f"This is your inventory {self.inventory}")
+# Nathan = Hero("Batman", 200, ['Batarang'])
+# print (Nathan.__dict__)
+# Nathan.buy({"title": "Batmobile", "maxspeed": "Mach 1"})
 
 
 class Pet:
-    def 
+    def __init__(self,name,animal):
+        self.__name__ = name
+        self.__animal__ = animal
+    def play(self,happiness):
+        x = input(f"What game is your pet playing?")
+        y = input("How much happiness is your pet gaining?")
+        happiness += y
+        print (f"After playing {x}, this is your pet's happiness {happiness}")
+dog=Pet("Brownie","dog")
