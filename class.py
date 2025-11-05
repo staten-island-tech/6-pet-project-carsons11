@@ -41,7 +41,8 @@ class Pet:
         self.__animal__ = animal
     def play(self,happiness):
         x = input(f"What game is your pet playing?")
-        y = input("How much happiness is your pet gaining?")
+        y = int(input("How much happiness is your pet gaining?"))
         happiness += y
-        print (f"After playing {x}, this is your pet's happiness {happiness}")
+        print (f"After playing {x}, this is your pet's happiness: {happiness}.")
 dog=Pet("Brownie","dog")
+dog.play(0)
