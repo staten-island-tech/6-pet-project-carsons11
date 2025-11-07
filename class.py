@@ -43,17 +43,25 @@
 #         self.__happinesslevel__ += happinesslevelgain
 #         print (f"After playing {game}, this is your pet's happiness: {self.__happinesslevel__}.")
 # Cat=Pet("Fluffy",0)
-# Cat.play("Fetch",10)
+# Cat.play("Laser",10)
 
 
-class Hero:
-    def __init__(self, name, money, inventory):
+# class Hero:
+#     def __init__(self, name, money, inventory):
+#         self.name = name
+#         self.__money__ = money
+#         self.inventory = inventory
+#     def buy(self, item, cost):
+#         self.inventory.append(item)
+#         self.__money__ -= cost
+#         print (f"After buying {item}, {self.name} now has ${self.__money__}.")
+# Ricky = Hero("Ricky", 150, ["Potion"])
+# Ricky.buy("Nathan",6.99)
+
+class User:
+    def __init__(self, name, email):
         self.name = name
-        self.__money__ = money
-        self.inventory = inventory
-    def buy(self, item, cost):
-        self.inventory.append(item)
-        self.__money__ -= cost
-        print (f"After buying {item}, {self.name} now has ${self.__money__}.")
-Ricky = Hero("Ricky", 150, ["Potion"])
-Ricky.buy("Nathan",6.99)
+        self.email = email
+    
+    def display_info(self):
+        return f"User: {self.name}, Email: {self.email}
