@@ -36,25 +36,23 @@
 
 
 # class Pet:
-#     def __init__(self,name,animal):
+#     def __init__(self,name,happinesslevel):
 #         self.__name__ = name
-#         self.__animal__ = animal
-#     def play(self,happinesslevel):
-#         x = input("What game is your pet playing?")
-#         y = int(input("How much happiness is your pet gaining?"))
-#         happinesslevel += y
-#         print (f"After playing {x}, this is your pet's happiness: {happinesslevel}.")
-# Cat=Pet("Meow","cat")
-# Cat.play(5)
+#         self.__happinesslevel__= happinesslevel
+#     def play(self,game,happinesslevelgain):
+#         self.__happinesslevel__ += happinesslevelgain
+#         print (f"After playing {game}, this is your pet's happiness: {self.__happinesslevel__}.")
+# Cat=Pet("Fluffy",0)
+# Cat.play("Fetch",10)
 
 
 class Hero:
     def __init__(self, name, money, inventory, cost):
         self.name = name
-        self.__money = money
+        self.__money__ = money
         self.inventory = inventory
         self.cost = cost
-    def buy(self, item):
+    def buy(self, item, cost):
         self.inventory.append(item)
         print(self.inventory)
 Jillian = Hero("Jillian", 150, ["Potion"])
