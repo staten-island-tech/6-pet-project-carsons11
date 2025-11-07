@@ -55,5 +55,5 @@ class Hero:
         self.inventory.append(item)
         self.__money__ -= cost
         print (f"After buying {item}, {self.name} now has ${self.__money__}.")
-Ricky = Hero("Jillian", 150, ["Potion"])
+Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99)
