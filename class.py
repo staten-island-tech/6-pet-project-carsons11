@@ -90,6 +90,9 @@ class Administrator(User):
     
     def display_info(self):
         return f"Administrator: {self.name}, Email: {self.email}, Role: {self.role}"
+    
+    def manage_system(self):
+        return f"{self.name} ({self.role}) is managing the system."
 
 student = Student("Alice", "alice@example.com", "S12345")
 teacher = Teacher("Mr. Smith", "smith@example.com", "Mathematics")
