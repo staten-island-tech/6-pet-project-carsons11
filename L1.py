@@ -35,15 +35,15 @@
 # Nathan.buy({"title": "Batmobile", "maxspeed": "Mach 1"})
 
 
-# class Pet:
-#     def __init__(self,name,happinesslevel):
-#         self.__name__ = name
-#         self.__happinesslevel__= happinesslevel
-#     def play(self,game,happinesslevelgain):
-#         self.__happinesslevel__ += happinesslevelgain
-#         print (f"After playing {game}, this is your pet's happiness: {self.__happinesslevel__}.")
-# Cat=Pet("Fluffy",0)
-# Cat.play("Laser",10)
+class Pet:
+    def __init__(self,name,happinesslevel):
+        self.__name__ = name
+        self.__happinesslevel__= happinesslevel
+    def play(self,game,happinesslevelgain):
+        self.__happinesslevel__ += happinesslevelgain
+        print (f"After playing {game}, this is your pet's happiness: {self.__happinesslevel__}.")
+Cat=Pet("Fluffy",0)
+Cat.play("Laser",10)
 
 
 # """ class Hero:
