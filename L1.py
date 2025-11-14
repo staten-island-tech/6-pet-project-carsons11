@@ -46,16 +46,16 @@ Cat=Pet("Fluffy",0)
 Cat.play("Laser",10)
 
 
-# """ class Hero:
-#     def __init__(self, name, money, inventory):
-#         self.name = name
-#         self.__money__ = money
-#         self.inventory = inventory
-#     def buy(self, item, cost):
-#         self.inventory.append(item)
-#         self.__money__ -= cost
-#         print (f"After buying {item}, {self.name} now has ${self.__money__}.")
-# Ricky = Hero("Ricky", 150, ["Potion"])
-# Ricky.buy("Nathan",6.99) """
+""" class Hero:
+    def __init__(self, name, money, inventory):
+        self.name = name
+        self.__money__ = money
+        self.inventory = inventory
+    def buy(self, item, cost):
+        self.inventory.append(item)
+        self.__money__ -= cost
+        print (f"After buying {item}, {self.name} now has ${self.__money__}.")
+Ricky = Hero("Ricky", 150, ["Potion"])
+Ricky.buy("Nathan",6.99) """
 
 
