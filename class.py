@@ -49,12 +49,14 @@
 
 
 class Hero:
-    def __init__(self, name, money, inventory, cost):
+    def __init__(self, name, money, inventory):
         self.name = name
-        self.__money = money
+        self.__money__ = money
         self.inventory = inventory
-        self.cost = cost
     def buy(self, item, cost):
         self.inventory.append(item)
-        print(self.inventory)
+        self.item = item
+        self.__money__ -= cost
+        print (f"After {self.name} bought {self.item}, {self.name} now has {self.__money__} dollars.")
 Jillian = Hero("Jillian", 150, ["Potion"])
+Jillian.buy ("Sword",50)
