@@ -59,9 +59,11 @@ Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99) """
 
 class Pet:
-    def createpet(self):
-        pet_type = input("What type of animal is your pet?")
-        petname = input("What is your pet's name?")
-        happinness = int(input("What is your pet's happiness level?"))
-        
+    def createpet(self,name):
+        self.name = name
+        happiness = int(input("How much happiness does your pet have from a scale of 1-10?"))
+        if type(happiness) != int: 
+            print ("Your happiness level must be a numerical integer.")
+Snowy = Pet("Snowy")
+    
 
