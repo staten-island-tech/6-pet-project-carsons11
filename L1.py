@@ -61,7 +61,7 @@ Ricky.buy("Nathan",6.99) """
 class Pet:
     def __init__(self,name):
         self.name = name
-    def petplay(self):
+    def happiness(self):
         b = False
         while b == False:
             happiness = input("How much happiness does your pet have from a scale of 1-10?")
@@ -74,6 +74,6 @@ class Pet:
                 else:
                     b = True
 Snowy = Pet("Snowy")
-Snowy.petplay()
+Snowy.happiness()
     
 
