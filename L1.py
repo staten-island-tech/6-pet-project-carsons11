@@ -59,11 +59,21 @@ Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99) """
 
 class Pet:
-    def createpet(self,name):
+    def __init__(self,name):
         self.name = name
-        happiness = int(input("How much happiness does your pet have from a scale of 1-10?"))
-        if type(happiness) != int: 
-            print ("Your happiness level must be a numerical integer.")
+    def petplay(self):
+        b = False
+        while b == False:
+            happiness = input("How much happiness does your pet have from a scale of 1-10?")
+            if not happiness.isdigit():
+                print ("Your happiness level must be a numerical integer. Try again.")
+            else: 
+                happiness = int(happiness)
+            if happiness>10 or happiness<1:
+                print ("Your happiness level must be within a range of 1-10")
+            else:
+                b = True
 Snowy = Pet("Snowy")
+Snowy.petplay()
     
 
