@@ -69,10 +69,10 @@ class Pet:
                 print ("Your happiness level must be a numerical integer. Try again.")
             else: 
                 happiness = int(happiness)
-            if happiness>10 or happiness<1:
-                print ("Your happiness level must be within a range of 1-10")
-            else:
-                b = True
+                if happiness>10 or happiness<1:
+                    print ("Your happiness level must be within a range of 1-10")
+                else:
+                    b = True
 Snowy = Pet("Snowy")
 Snowy.petplay()
     
