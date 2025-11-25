@@ -58,9 +58,12 @@
 Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99) """
 
+
 import random
 class Pet:
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
+        self.petscore = 50
         self.happiness = 5
         self.cleaniness = 5
         self.hunger = 5
@@ -68,17 +71,28 @@ class Pet:
     def happiness_change(self):
         randomhappinessdecrease = random.randint(1,5)
         self.happiness - randomhappinessdecrease
+        print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
         if self.happiness < 5:
-            print (f"{name} happiness is at {self.happiness}. You need to play with your pet.")
+            print (f"{self.name} is feeling sad. You need to play with your pet.")
             print ("1: Play with your pet.")
-            print ("2: Leave him sad.")
-        x = input ("")
-        
-         
+            print ("2: Ignore him/her.")
+        x = input ("Choose the number that accommodates the action you wanna do:")
+        if x == "1":
+            self.happiness = 10
+            print ("Hooray, your pet's happiness is now max.")
+            self.petscore += 15
+        if x == "2":
+            self.happiness = 0
+            print ("Your pet is depressed. You lost 15 points to your pet score.")
+            self.petscore -= 15
+        print (f"Your pet score is now at {self.petscore}") 
+Pet = Pet("Pet")
+
 def petplay():
-    name = input("What is your pet's name?").strip()
+    print ("Welcome. Your goal is to get all your pet's attributes to max which is 10 and achieve the highest pet score possible. Your pet score starts at 50 with max being 100.")
     randomvariable=random.randint(1,3)
     if randomvariable==1:
         Pet.happiness_change
     if randomvariable==2:
         Pet.
+petplay()
