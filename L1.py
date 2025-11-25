@@ -58,22 +58,27 @@
 Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99) """
 
+import random
 class Pet:
-    def __init__(self,name):
-        self.name = name
-    def happiness(self):
-        b = False
-        while b == False:
-            happiness = input("How much happiness does your pet have from a scale of 1-10?")
-            if not happiness.isdigit():
-                print ("Your happiness level must be a numerical integer. Try again.")
-            else: 
-                happiness = int(happiness)
-                if happiness>10 or happiness<1:
-                    print ("Your happiness level must be within a range of 1-10")
-                else:
-                    b = True
-Snowy = Pet("Snowy")
-Snowy.happiness()
-    
-
+    def __init__(self):
+        self.happiness = 5
+        self.cleaniness = 5
+        self.hunger = 5
+        
+    def happiness_change(self):
+        randomhappinessdecrease = random.randint(1,5)
+        self.happiness - randomhappinessdecrease
+        if self.happiness < 5:
+            print (f"{name} happiness is at {self.happiness}. You need to play with your pet.")
+            print ("1: Play with your pet.")
+            print ("2: Leave him sad.")
+        x = input ("")
+        
+         
+def petplay():
+    name = input("What is your pet's name?").strip()
+    randomvariable=random.randint(1,3)
+    if randomvariable==1:
+        Pet.happiness_change
+    if randomvariable==2:
+        Pet.
