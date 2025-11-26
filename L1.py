@@ -59,6 +59,7 @@ Ricky = Hero("Ricky", 150, ["Potion"])
 Ricky.buy("Nathan",6.99) """
 
 
+
 import random
 class Pet:
     def __init__(self, name):
@@ -70,7 +71,7 @@ class Pet:
         
     def happiness_change(self):
         randomhappinessdecrease = random.randint(1,5)
-        self.happiness - randomhappinessdecrease
+        self.happiness -= randomhappinessdecrease
         print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
         if self.happiness < 5:
             print (f"{self.name} is feeling sad. You need to play with your pet.")
@@ -79,20 +80,61 @@ class Pet:
         x = input ("Choose the number that accommodates the action you wanna do:")
         if x == "1":
             self.happiness = 10
-            print ("Hooray, your pet's happiness is now max.")
+            print ("Hooray, your pet's happiness meter is now max.")
             self.petscore += 15
         if x == "2":
             self.happiness = 0
-            print ("Your pet is depressed. You lost 15 points to your pet score.")
+            print ("Your pet's happiness meter is now zero. You lost 15 points to your pet score.")
             self.petscore -= 15
-        print (f"Your pet score is now at {self.petscore}") 
-Pet = Pet("Pet")
+        print (f"Your pet score is now at {self.petscore}")
 
-def petplay():
+    
+    def cleaniness_change(self):
+        randomcleaninessdecrease = random.randint(1,5)
+        self.cleaniness -= randomcleaninessdecrease
+        print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
+        if self.cleaniness < 5:
+            print (f"{self.name} is feeling dirty. You need to clean your pet.")
+            print ("1: Clean your pet.")
+            print ("2: Ignore him/her.")
+        x = input ("Choose the number that accommodates the action you wanna do:")
+        if x == "1":
+            self.cleaniness = 10
+            print ("Hooray, your pet's cleaniness meter is now max.")
+            self.petscore += 15
+        if x == "2":
+            self.cleaniness = 0
+            print ("Your pet's cleaniness meter is now at zero. You lost 15 points to your pet score.")
+            self.petscore -= 15
+        print (f"Your pet score is now at {self.petscore}")
+
+
+    def hunger_change(self):
+        randomhungerdecrease = random.randint(1,5)
+        self.hunger -= randomhungerdecrease
+        print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
+        if self.hunger < 5:
+            print (f"{self.name} is feeling hungry. You need to feed your pet.")
+            print ("1: Feed your pet.")
+            print ("2: Ignore him/her.")
+        x = input ("Choose the number that accommodates the action you wanna do:")
+        if x == "1":
+            self.hunger = 10
+            print ("Hooray, your pet's hunger meter is now max.")
+            self.petscore += 15
+        if x == "2":
+            self.hunger = 0
+            print ("Your pet's hunger meter is now at zero. You lost 15 points to your pet score.")
+            self.petscore -= 15
+        print (f"Your pet score is now at {self.petscore}")
+self = Pet("Pet")
+def petplay(self):
     print ("Welcome. Your goal is to get all your pet's attributes to max which is 10 and achieve the highest pet score possible. Your pet score starts at 50 with max being 100.")
-    randomvariable=random.randint(1,2)
+    randomvariable=random.randint(1,3)
     if randomvariable==1:
-        Pet.happiness_change
-    # if randomvariable==2:
-    #     Pet.
-petplay()
+        Pet.happiness_change(self)
+    if randomvariable==2:
+        Pet.cleaniness_change(self)
+    if randomvariable==3:
+        Pet.hunger_change(self)
+petplay(self)
