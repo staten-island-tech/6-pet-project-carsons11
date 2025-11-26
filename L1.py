@@ -90,9 +90,9 @@ Pet = Pet("Pet")
 
 def petplay():
     print ("Welcome. Your goal is to get all your pet's attributes to max which is 10 and achieve the highest pet score possible. Your pet score starts at 50 with max being 100.")
-    randomvariable=random.randint(1,3)
+    randomvariable=random.randint(1,2)
     if randomvariable==1:
         Pet.happiness_change
-    if randomvariable==2:
-        Pet.
+    # if randomvariable==2:
+    #     Pet.
 petplay()
