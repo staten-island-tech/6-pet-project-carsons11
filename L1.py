@@ -75,7 +75,7 @@ class Pet:
         self.happiness -= randomhappinessdecrease
         print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
         while valid == True:
-            if self.happiness < 5:
+            if self.happiness < 10:
                 print (f"{self.name} is feeling sad. You need to play with your pet.")
                 print ("1: Play with your pet.")
                 print ("2: Ignore him/her.")
@@ -101,7 +101,7 @@ class Pet:
         self.cleaniness -= randomcleaninessdecrease
         print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
         while valid == True:
-            if self.cleaniness < 5:
+            if self.cleaniness < 10:
                 print (f"{self.name} is feeling dirty. You need to clean your pet.")
                 print ("1: Clean your pet.")
                 print ("2: Ignore him/her.")
@@ -127,7 +127,7 @@ class Pet:
         self.hunger -= randomhungerdecrease
         print (f"Pet Happiness: {self.happiness}    Pet Cleaniness: {self.cleaniness}    Pet Hunger: {self.hunger}")
         while valid == True:
-            if self.hunger < 5:
+            if self.hunger < 10:
                 print (f"{self.name} is feeling hungry. You need to feed your pet.")
                 print ("1: Feed your pet.")
                 print ("2: Ignore him/her.")
