@@ -145,7 +145,9 @@ class Pet:
             else: 
                 print ("You must either choose option 1 or 2.")
         print (f"Your pet score is now at {self.petscore}")
-self = Pet("Pet")
+validname = False
+name = input ("What is your pet's name?")
+self = Pet(f"{name}")
 def petplay(self):
     print ("Welcome. Your goal is to get all your pet's attributes to max which is 10 and achieve the highest pet score possible. Your pet score starts at 50 with max being 100.")
     for i in range(3):
@@ -156,4 +158,8 @@ def petplay(self):
             Pet.cleaniness_change(self)
         if randomvariable==3:
             Pet.hunger_change(self)
+    if self.petscore > 50:
+        print (f"You have successfully kept {name} happy, clean, and full. {name} is pleased with you.")
+    if self.petscore < 50: 
+        print (f"{name} is angry at you. You have NOT been a good petowner to {name}.")
 petplay(self)
