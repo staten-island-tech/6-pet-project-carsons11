@@ -149,8 +149,9 @@ validname = False
 name = input ("What is your pet's name?")
 self = Pet(f"{name}")
 def petplay(self):
+    round = random.randint(1,5)
     print ("Welcome. Your goal is to get all your pet's attributes to max which is 10 and achieve the highest pet score possible. Your pet score starts at 50 with max being 100.")
-    for i in range(3):
+    for i in range(round):
         randomvariable=random.randint(1,3)
         if randomvariable==1:
             Pet.happiness_change(self)
