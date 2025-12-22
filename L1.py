@@ -62,7 +62,7 @@ Ricky.buy("Nathan",6.99) """
 
 import random
 class Pet:
-    def __init__(self, name):
+    def __init__(self,name):
         self.name = name
         self.petscore = 50
         self.happiness = 5
